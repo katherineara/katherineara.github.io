@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Body Digital Index Quiz</title>
+		<title>Personal Digital Index Calculator</title>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
@@ -15,14 +15,14 @@
 		</nav>
 		<div class="container">
     		<div class="blurb">
-        		<h1>Digital Body Index Quiz</h1>
+        		<h1>Personal Digital Index Calculator</h1>
 				<p>Take this quiz!</em> Digital Over-Consumption <a href="/about">Read more here....</a></p>
     		</div>
 		</div>
 		
-		<p>Answer the following questions to the best of your ability, then click "Submit" to submit the form:</p>
+		<p>Answer the following questions to the best of your ability, then click "Submit" to get your results:</p>
 
-		<form id="form1" action="/action_page.php">
+		<form action="/action_page.php">
 			What is your age?<br>
 			<input type="text" name="age">
 			<br><br>
@@ -35,8 +35,13 @@
 		  <input type="radio" name="gender" value="other"> Other<br><br>
 		</form>
 
+		<form action="/action_page.php">
+		  Date of Birth: <br>
+		  <input type="date" name="bday"> <br><br>
+		</form>
+
 		<form>
-			Check off the following items if they are applicable to you: <br>
+			Check off the following items that are applicable to you: <br>
   			<input type="checkbox" name="check1" value="c1"> I have a smartphone <br>
   			<input type="checkbox" name="check2" value="c2"> I have a laptop <br>
   			<input type="checkbox" name="check3" value="c3"> I have a tablet <br>
@@ -49,8 +54,13 @@
 		</form>
 
 		<form action="/action_page.php">
-		  Date of Birth: <br>
-		  <input type="date" name="bday">
+			<strong>Phone Usage Questions: Enter your best estimates</strong><br>
+			What is your daily screen time?<input type="text" name="age"><br>
+			How much time do you spend on your phone per week?<input type="text" name="age"><br>
+			How many notifications do you get per day?<input type="text" name="age"><br>
+			How many times do you pick up your phone per day?<input type="text" name="age"><br>
+			How much time do you spend per day passively taking in content? (i.e. YouTube, Netflix, Videos) <input type="text" name="age"><br>
+			How much time do spend per day scrolling?(i.e. Pinterest, Instagram, Twitter)<input type="text" name="age"><br><br>
 		</form>
 
 		<input type="button" onclick="myFunction()" value="Submit">
