@@ -1,2 +1,2 @@
 # katherineara.github.io
-Quiz
+Personal Digital Index Calculator
