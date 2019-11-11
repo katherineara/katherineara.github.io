@@ -82,7 +82,7 @@
 		  <input type="radio" name="gender" value="other"> Often <br>
 		  <input type="radio" name="gender" value="other"> Always<br><br>
 		 </form>
-		 
+
 		 <form action="/action_page.php">
 		  I check my phone while I am eating meals<br>
 		  <input type="radio" name="gender" value="male" checked> Never <br>
@@ -117,11 +117,14 @@
 
 		<input type="button" onclick="myFunction()" value="Submit">
 		
+		<h1 id="score"></h1><br>
 		<p id="demo"></p>
 
 		<script>
 		function myFunction() {
-			var text = "Your Personal Digital Index Score is 157";
+			var score = "Your Personal Digital Index Score is 157";
+			document.getElementById("demo").innerHTML = score;
+			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
 			document.getElementById("demo").innerHTML = text;
 		}
 		</script>
