@@ -68,7 +68,9 @@
 			font-family: 'Sans-Serif';
 		}
 
-		h2 {
+		input[type=button] {
+			padding: 16px 32px;
+			font-size: 50px;
 		}
 	</style>
 	<title>Personal Digital Index Calculator</title>
@@ -107,9 +109,9 @@
 		</form> -->
 
 		<h2>Calculator</h2>
-		<form action="/action_page.php">
+		<form action="/action_page.php" value="5">
 		  <label>Year of Birth</label><br>
-		  <input type="number" name="bday">
+		  <input id="year" name="date" type="number">
 		</form>
 
 		<form>
@@ -142,11 +144,25 @@
 			<label>How many apps do you have on your phone?</label><br>
 			<input type="number" name="age"><br><br>
 			<label>How many times do you charge your phone per day?</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="age"><br>
 		</form>
 
+		<form>
+			<h2>Applications</h2>
+			<!-- Check off your main applications on your devices -->
+  			<input type="checkbox" name="check1" value="c1"> <label>Utility</label> <br>
+  			<input type="checkbox" name="check2" value="c2"> <label>Entertainment</label> <br>
+  			<input type="checkbox" name="check3" value="c3"> <label>Games</label> <br>
+  			<input type="checkbox" name="check4" value="c4"> <label>News</label> <br>
+  			<input type="checkbox" name="check5" value="c5"> <label>Productivity</label> <br>
+  			<input type="checkbox" name="check6" value="c6"> <label>Lifestyle</label> <br>
+  			<input type="checkbox" name="check7" value="c7"> <label>Social Networking</label> <br>
+  			<input type="checkbox" name="check7" value="c7"> <label>Other</label><br>
+		</form>
+
+		<h2>Habits</h2>
 		<form action="/action_page.php">
-		  <strong>Rate the following statements based on how often you do them:</strong><br><br>
+		  <!-- <h4>Rate the following statements based on how often you do them:</h4> -->
 		  <label>I carry my phone with me</label><br>
 		  <input type="radio" name="gender" value="male" checked> Never <br>
 		  <input type="radio" name="gender" value="female"> Sometimes <br>
@@ -226,27 +242,33 @@
 		  <input type="radio" name="gender" value="other"> Always<br><br>
 		</form>
 
+		<br>
+
 		<input type="button" onclick="myFunction()" value="Submit">
 		
-		<h1 id="score"></h1><br>
-		<p id="demo"></p>
+		<h1 id="message"></h1><br>
+		<p id="score"></p>
+		<div id="total"><div>
 
 		<script>
 		function myFunction() {
-			var score = "Your Personal Digital Index Score is 157";
-			document.getElementById("score").innerHTML = score;
-			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
-			document.getElementById("demo").innerHTML = text;
-			var nameValue = document.getElementById("uniqueID").value;
-			document.getElementById("demo").innerHTML = nameValue;
-			var ele = document.getElementsByName('genderz'); 
+			var message = "Your Personal Digital Index Score is ";
+			var x = document.getElementById("year").value;
+			document.getElementById("message").innerHTML = message + x;
+			
+			// var nameValue = document.getElementById("uniqueID").value;
+			// document.getElementById("demo").innerHTML = nameValue;
+
+			// var ele = document.getElementsByName('genderz'); 
             
-            for(i = 0; i < ele.length; i++) { 
-                if(ele[i].checked) {
-                	document.getElementById("demo").innerHTML
-                        += ele[i].value; 
-                }
-            } 
+   //          for(i = 0; i < ele.length; i++) { 
+   //              if(ele[i].checked) {
+   //              	document.getElementById("demo").innerHTML
+   //                      += ele[i].value; 
+   //              }
+   //          }
+   			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
+			document.getElementById("score").innerHTML = text;
 		}
 		</script>
 
