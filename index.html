@@ -129,22 +129,22 @@
 		<form action="/action_page.php">
 			<h2>Phone Usage</h2>
 		<!-- 	Enter your best estimates -->
-			<label>What is your daily screen time?</label><br>
-			<input type="number" name="usage"><br><br>
-			<label>How much time do you spend on your phone per week?</label><br>
-			<input type="number" name="usage"><br><br>
-			<label>How many notifications do you get per day?</label><br>
-			<input type="number" name="usage"><br><br>
-			<label>How many times do you pick up your phone per day?</label><br>
-			<input type="number" name="usage"><br><br>
+			<label>What is your daily screen time across all devices? (Hours i.e. 1.2) </label><br>
+			<input type="number" name="usage1"><br><br>
+			<label>How much time do you spend on your phone per week? (Hours) </label><br>
+			<input type="number" name="usage2"><br><br>
+			<label>How many notifications do you get on your phone per day? (Number of Notifications)</label><br>
+			<input type="number" name="usage3"><br><br>
+			<label>How many times do you pick up your phone per day? (Pickups) </label><br>
+			<input type="number" name="usage4"><br><br>
 			<label>How much time do you spend per day passively taking in content? (i.e. YouTube, Netflix, Videos)</label><br>
-			<input type="number" name="usage"><br><br>
-			<label>How much time do spend per day scrolling? (i.e. Pinterest, Instagram, Twitter)</label><br>
-			<input type="number" name="usage"><br><br>
+			<input type="number" name="usage5"><br><br>
 			<label>How many apps do you have on your phone?</label><br>
-			<input type="number" name="usage"><br><br>
-			<label>How many times do you charge your phone per day?</label><br>
-			<input type="number" name="usage"><br>
+			<input type="number" name="usage6"><br><br>
+			<label>How many times do you have to charge your phone per day?</label><br>
+			<input type="number" name="usage7"><br><br>
+			<label>How much time do spend per day working on your laptop?</label><br>
+			<input type="number" name="usage8"><br>
 		</form>
 
 		<form>
@@ -319,6 +319,20 @@
 						always++;
 					}
 				}
+			}
+		}
+
+		function calculateUsage() {
+			var score = 0;
+			var usage1 = document.getElementById("usage1").value;
+			if (usage1 > 20)
+			{
+				score += 3;
+			} else if (usage1 > 10)
+			{
+				score += 2;
+			} else {
+				score += 1;
 			}
 		}
 
