@@ -50,35 +50,38 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/contact">Contact</a></li>
-        		<li><a href="/moreinfo">More Information</a></li>
-    		</ul>
-		</nav>
 		<div class="container">
     		<div class="blurb">
         		<h1>Personal Digital Index Calculator</h1>
-				<p>Take this quiz!</em> Digital Over-Consumption <a href="/about">Read more here....</a></p>
+<!-- 				<p>Take this quiz!</em> Digital Over-Consumption 
+					<a href="/about">Read more here....</a>
+				</p> -->
     		</div>
 		</div>
+		<nav>
+    		<ul>
+        		<li><a href="/">About</a></li>
+	        	<li><a href="/about">Calculator</a></li>
+<!--         		<li><a href="/contact">Contact</a></li>
+        		<li><a href="/moreinfo">More Information</a></li> -->
+    		</ul>
+		</nav>
+		
 		
 		<p>Answer the following questions to the best of your ability, then click "Submit" to get your results:</p>
 
 		<form action="/action_page.php">
 			<strong>Personal Questions</strong><br><br>
 			What is your age?<br>
-			<input type="text" name="age">
+			<input id="uniqueID" type="text" name="age">
 			<br><br>
 		</form>
 
-		<form action="/action_page.php">
+		<form id="genderz" action="/action_page.php">
 			What is your gender? <br>
-		  <input type="radio" name="gender" value="male" checked> Male<br>
-		  <input type="radio" name="gender" value="female"> Female<br>
-		  <input type="radio" name="gender" value="other"> Other<br><br>
+		  <input type="radio" name="genderz" value="male" checked> Male<br>
+		  <input type="radio" name="genderz" value="femaleeee"> Female<br>
+		  <input type="radio" name="genderz" value="other"> Other<br><br>
 		</form>
 
 		<form action="/action_page.php">
@@ -171,6 +174,16 @@
 			document.getElementById("score").innerHTML = score;
 			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
 			document.getElementById("demo").innerHTML = text;
+			var nameValue = document.getElementById("uniqueID").value;
+			document.getElementById("demo").innerHTML = nameValue;
+			var ele = document.getElementsByName('genderz'); 
+            
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) {
+                	document.getElementById("demo").innerHTML
+                        += ele[i].value; 
+                }
+            } 
 		}
 		</script>
 
