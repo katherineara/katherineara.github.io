@@ -130,21 +130,21 @@
 			<h2>Phone Usage</h2>
 		<!-- 	Enter your best estimates -->
 			<label>What is your daily screen time?</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="usage"><br><br>
 			<label>How much time do you spend on your phone per week?</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="usage"><br><br>
 			<label>How many notifications do you get per day?</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="usage"><br><br>
 			<label>How many times do you pick up your phone per day?</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="usage"><br><br>
 			<label>How much time do you spend per day passively taking in content? (i.e. YouTube, Netflix, Videos)</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="usage"><br><br>
 			<label>How much time do spend per day scrolling? (i.e. Pinterest, Instagram, Twitter)</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="usage"><br><br>
 			<label>How many apps do you have on your phone?</label><br>
-			<input type="number" name="age"><br><br>
+			<input type="number" name="usage"><br><br>
 			<label>How many times do you charge your phone per day?</label><br>
-			<input type="number" name="age"><br>
+			<input type="number" name="usage"><br>
 		</form>
 
 		<form>
@@ -164,18 +164,18 @@
 		<form action="/action_page.php">
 		  <!-- <h4>Rate the following statements based on how often you do them:</h4> -->
 		  <label>I carry my phone with me</label><br>
-		  <input type="radio" name="habit1" value="never" checked> Never <br>
-		  <input type="radio" name="habit1" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habit1" value="often"> Often <br>
-		  <input type="radio" name="habit1" value="always"> Always<br><br>
+		  <input type="radio" name="habits" value="never" checked> Never <br>
+		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+		  <input type="radio" name="habits" value="often"> Often <br>
+		  <input type="radio" name="habits" value="always"> Always<br><br>
 		 </form>
 
-		 <form action="/action_page.php">
+		 <form id="habits" action="/action_page.php">
 		  <label>I check my phone while I am eating meals</label><br>
-		  <input type="radio" name="gender" value="male" checked> Never <br>
-		  <input type="radio" name="gender" value="female"> Sometimes <br>
-		  <input type="radio" name="gender" value="other"> Often <br>
-		  <input type="radio" name="gender" value="other"> Always<br><br>
+		  <input type="radio" name="habits" value="never" checked> Never <br>
+		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+		  <input type="radio" name="habits" value="often"> Often <br>
+		  <input type="radio" name="habits" value="always"> Always<br><br>
 		  </form>
 
 		 <form action="/action_page.php">
@@ -298,6 +298,28 @@
 				}
 			}
 			return score;
+		}
+
+		function calculateHabits() {
+			var habit = document.getElementsByName("habits");
+			var never = 0;
+			var sometimes = 0;
+			var often = 0;
+			var always = 0;
+			for (i = 0; i < habit.length; i++)
+			{
+				if (habit[i].checked) {
+					if (habit[i].value === "never") {
+						never++;
+					} else if (habit[i].value === "sometimes") {
+						sometimes++;
+					} else if (habit[i].value === "often") {
+						often++;
+					} else if (habit[i].value === "always") {
+						always++;
+					}
+				}
+			}
 		}
 
 		</script>
