@@ -45,17 +45,39 @@
 		ul.posts li {
 		    list-style: none;
 		}
+
+		label {
+			font-size: 1.1em;
+		}
+
+		input[type=text]:focus {
+  			border: 2px solid #555;
+  			
+		}
+
+		input[type=text], [type=number] {
+			outline: none;
+			width: 60%;
+			padding: 12px 15px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-size: 17px;
+			font-family: 'Sans-Serif';
+		}
+
+		h2 {
+		}
 	</style>
-		<title>Personal Digital Index Calculator</title>
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<title>Personal Digital Index Calculator</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
 		<div class="container">
     		<div class="blurb">
         		<h1>Personal Digital Index Calculator</h1>
-<!-- 				<p>Take this quiz!</em> Digital Over-Consumption 
-					<a href="/about">Read more here....</a>
-				</p> -->
     		</div>
 		</div>
 		<nav>
@@ -70,7 +92,7 @@
 		
 		<p>Answer the following questions to the best of your ability, then click "Submit" to get your results:</p>
 
-		<form action="/action_page.php">
+<!-- 		<form action="/action_page.php">
 			<strong>Personal Questions</strong><br><br>
 			What is your age?<br>
 			<input id="uniqueID" type="text" name="age">
@@ -82,49 +104,50 @@
 		  <input type="radio" name="genderz" value="male" checked> Male<br>
 		  <input type="radio" name="genderz" value="femaleeee"> Female<br>
 		  <input type="radio" name="genderz" value="other"> Other<br><br>
-		</form>
+		</form> -->
 
+		<h2>Calculator</h2>
 		<form action="/action_page.php">
-		  Date of Birth: <br>
-		  <input type="date" name="bday"> <br><br>
+		  <label>Year of Birth</label><br>
+		  <input type="number" name="bday">
 		</form>
 
 		<form>
-			<strong>Checklist - Check off the following items that are applicable to you: </strong><br><br>
-  			<input type="checkbox" name="check1" value="c1"> I have a smartphone <br>
-  			<input type="checkbox" name="check2" value="c2"> I have a laptop <br>
-  			<input type="checkbox" name="check3" value="c3"> I have a tablet <br>
-  			<input type="checkbox" name="check4" value="c4"> I have a television <br>
-  			<input type="checkbox" name="check5" value="c5"> I have a smart watch <br>
-  			<input type="checkbox" name="check6" value="c6"> I sleep with my phone next to my bed <br>
-  			<input type="checkbox" name="check7" value="c7"> I check my phone in the middle of the night <br>
-  			<input type="checkbox" name="check8" value="c8"> I use social media apps <br>
-  			<input type="checkbox" name="check9" value="c9"> My posture is bent when looking at my device <br><br>
+			<h2>Device Checklist</h2>
+			<!-- Check off everything applicable to you -->
+  			<input type="checkbox" name="check1" value="c1"> <label>I have a smartphone</label> <br>
+  			<input type="checkbox" name="check2" value="c2"> <label>I have a laptop</label> <br>
+  			<input type="checkbox" name="check3" value="c3"> <label>I have a tablet</label> <br>
+  			<input type="checkbox" name="check4" value="c4"> <label>I have a television</label> <br>
+  			<input type="checkbox" name="check5" value="c5"> <label>I have a smart watch</label> <br>
+  			<input type="checkbox" name="check6" value="c6"> <label>I have an e-reader</label> <br>
+  			<input type="checkbox" name="check7" value="c7"> <label>I have a video game console</label> <br>
 		</form>
 
 		<form action="/action_page.php">
-			<strong>Phone Usage Questions - Enter your best estimates:</strong><br><br>
-			What is your daily screen time?<br>
-			<input type="text" name="age"><br><br>
-			How much time do you spend on your phone per week?<br>
-			<input type="text" name="age"><br><br>
-			How many notifications do you get per day?<br>
-			<input type="text" name="age"><br><br>
-			How many times do you pick up your phone per day?<br>
-			<input type="text" name="age"><br><br>
-			How much time do you spend per day passively taking in content? (i.e. YouTube, Netflix, Videos)<br>
-			<input type="text" name="age"><br><br>
-			How much time do spend per day scrolling? (i.e. Pinterest, Instagram, Twitter)<br>
-			<input type="text" name="age"><br><br>
-			How many apps do you have on your phone?<br>
-			<input type="text" name="age"><br><br>
-			How many times do you charge your phone per day?<br>
-			<input type="text" name="age"><br><br><br>
+			<h2>Phone Usage</h2>
+		<!-- 	Enter your best estimates -->
+			<label>What is your daily screen time?</label><br>
+			<input type="number" name="age"><br><br>
+			<label>How much time do you spend on your phone per week?</label><br>
+			<input type="number" name="age"><br><br>
+			<label>How many notifications do you get per day?</label><br>
+			<input type="number" name="age"><br><br>
+			<label>How many times do you pick up your phone per day?</label><br>
+			<input type="number" name="age"><br><br>
+			<label>How much time do you spend per day passively taking in content? (i.e. YouTube, Netflix, Videos)</label><br>
+			<input type="number" name="age"><br><br>
+			<label>How much time do spend per day scrolling? (i.e. Pinterest, Instagram, Twitter)</label><br>
+			<input type="number" name="age"><br><br>
+			<label>How many apps do you have on your phone?</label><br>
+			<input type="number" name="age"><br><br>
+			<label>How many times do you charge your phone per day?</label><br>
+			<input type="number" name="age"><br><br>
 		</form>
 
 		<form action="/action_page.php">
 		  <strong>Rate the following statements based on how often you do them:</strong><br><br>
-		  I carry my phone with me<br>
+		  <label>I carry my phone with me</label><br>
 		  <input type="radio" name="gender" value="male" checked> Never <br>
 		  <input type="radio" name="gender" value="female"> Sometimes <br>
 		  <input type="radio" name="gender" value="other"> Often <br>
@@ -132,7 +155,7 @@
 		 </form>
 
 		 <form action="/action_page.php">
-		  I check my phone while I am eating meals<br>
+		  <label>I check my phone while I am eating meals</label><br>
 		  <input type="radio" name="gender" value="male" checked> Never <br>
 		  <input type="radio" name="gender" value="female"> Sometimes <br>
 		  <input type="radio" name="gender" value="other"> Often <br>
@@ -140,7 +163,7 @@
 		  </form>
 
 		 <form action="/action_page.php">
-		  I use the phone when I go to the restroom<br>
+		  <label>I use the phone when I go to the restroom</label><br>
 		  <input type="radio" name="gender" value="male" checked> Never <br>
 		  <input type="radio" name="gender" value="female"> Sometimes <br>
 		  <input type="radio" name="gender" value="other"> Often <br>
@@ -148,7 +171,7 @@
 		  </form>
 
 		 <form action="/action_page.php">
-		  I go on my phone while I am walking<br>
+		  <label>I go on my phone while I am walking</label><br>
 		  <input type="radio" name="gender" value="male" checked> Never <br>
 		  <input type="radio" name="gender" value="female"> Sometimes <br>
 		  <input type="radio" name="gender" value="other"> Often <br>
@@ -156,7 +179,47 @@
 		 </form>
 
 		 <form action="/action_page.php">
-		  My eyes get tired from looking at a screen<br>
+		  <label>My eyes get tired from looking at a screen</label><br>
+		  <input type="radio" name="gender" value="male" checked> Never <br>
+		  <input type="radio" name="gender" value="female"> Sometimes <br>
+		  <input type="radio" name="gender" value="other"> Often <br>
+		  <input type="radio" name="gender" value="other"> Always<br><br>
+		</form>
+
+		<form action="/action_page.php">
+		  <label>I check my phone or laptop first thing in the morning</label><br>
+		  <input type="radio" name="gender" value="male" checked> Never <br>
+		  <input type="radio" name="gender" value="female"> Sometimes <br>
+		  <input type="radio" name="gender" value="other"> Often <br>
+		  <input type="radio" name="gender" value="other"> Always<br><br>
+		</form>
+
+		<form action="/action_page.php">
+		  <label>I sleep with my phone next to my bed</label><br>
+		  <input type="radio" name="gender" value="male" checked> Never <br>
+		  <input type="radio" name="gender" value="female"> Sometimes <br>
+		  <input type="radio" name="gender" value="other"> Often <br>
+		  <input type="radio" name="gender" value="other"> Always<br><br>
+		</form>
+
+		<form action="/action_page.php">
+		  <label>I check my phone in the middle of the night</label><br>
+		  <input type="radio" name="gender" value="male" checked> Never <br>
+		  <input type="radio" name="gender" value="female"> Sometimes <br>
+		  <input type="radio" name="gender" value="other"> Often <br>
+		  <input type="radio" name="gender" value="other"> Always<br><br>
+		</form>
+
+		<form action="/action_page.php">
+		  <label>My posture is bent when looking at my device</label><br>
+		  <input type="radio" name="gender" value="male" checked> Never <br>
+		  <input type="radio" name="gender" value="female"> Sometimes <br>
+		  <input type="radio" name="gender" value="other"> Often <br>
+		  <input type="radio" name="gender" value="other"> Always<br><br>
+		</form>
+
+		<form action="/action_page.php">
+		  <label>I sleep less than normal because I am on digital devices</label><br>
 		  <input type="radio" name="gender" value="male" checked> Never <br>
 		  <input type="radio" name="gender" value="female"> Sometimes <br>
 		  <input type="radio" name="gender" value="other"> Often <br>
