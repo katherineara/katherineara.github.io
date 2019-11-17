@@ -47,10 +47,10 @@
 		}
 
 		label {
-			font-size: 1.1em;
+			font-size: 1.2em;
 		}
 
-		input[type=text]:focus {
+		input[type=number]:focus {
   			border: 2px solid #555;
   			
 		}
@@ -109,21 +109,21 @@
 		</form> -->
 
 		<h2>Calculator</h2>
-		<form action="/action_page.php" value="5">
+		<form action="/action_page.php">
 		  <label>Year of Birth</label><br>
-		  <input id="year" name="date" type="number">
+		  <input id="year" name="date" type="number" min="0">
 		</form>
 
 		<form>
 			<h2>Device Checklist</h2>
 			<!-- Check off everything applicable to you -->
-  			<input type="checkbox" name="check1" value="c1"> <label>I have a smartphone</label> <br>
-  			<input type="checkbox" name="check2" value="c2"> <label>I have a laptop</label> <br>
-  			<input type="checkbox" name="check3" value="c3"> <label>I have a tablet</label> <br>
-  			<input type="checkbox" name="check4" value="c4"> <label>I have a television</label> <br>
-  			<input type="checkbox" name="check5" value="c5"> <label>I have a smart watch</label> <br>
-  			<input type="checkbox" name="check6" value="c6"> <label>I have an e-reader</label> <br>
-  			<input type="checkbox" name="check7" value="c7"> <label>I have a video game console</label> <br>
+  			<input type="checkbox" name="check" value="c1"> <label>I have a smartphone</label> <br> <br>
+  			<input type="checkbox" name="check" value="c2"> <label>I have a laptop</label> <br> <br>
+  			<input type="checkbox" name="check" value="c3"> <label>I have a tablet</label> <br> <br>
+  			<input type="checkbox" name="check" value="c4"> <label>I have a television</label> <br> <br>
+  			<input type="checkbox" name="check" value="c5"> <label>I have a smart watch</label> <br> <br>
+  			<input type="checkbox" name="check" value="c6"> <label>I have an e-reader</label> <br> <br>
+  			<input type="checkbox" name="check" value="c7"> <label>I have a video game console</label> <br> <br>
 		</form>
 
 		<form action="/action_page.php">
@@ -150,14 +150,14 @@
 		<form>
 			<h2>Applications</h2>
 			<!-- Check off your main applications on your devices -->
-  			<input type="checkbox" name="check1" value="c1"> <label>Utility</label> <br>
-  			<input type="checkbox" name="check2" value="c2"> <label>Entertainment</label> <br>
-  			<input type="checkbox" name="check3" value="c3"> <label>Games</label> <br>
-  			<input type="checkbox" name="check4" value="c4"> <label>News</label> <br>
-  			<input type="checkbox" name="check5" value="c5"> <label>Productivity</label> <br>
-  			<input type="checkbox" name="check6" value="c6"> <label>Lifestyle</label> <br>
-  			<input type="checkbox" name="check7" value="c7"> <label>Social Networking</label> <br>
-  			<input type="checkbox" name="check7" value="c7"> <label>Other</label><br>
+  			<input type="checkbox" name="check1" value="c1"> <label>Utility</label> <br> <br>
+  			<input type="checkbox" name="check2" value="c2"> <label>Entertainment</label> <br> <br>
+  			<input type="checkbox" name="check3" value="c3"> <label>Games</label> <br> <br>
+  			<input type="checkbox" name="check4" value="c4"> <label>News</label> <br> <br>
+  			<input type="checkbox" name="check5" value="c5"> <label>Productivity</label> <br> <br>
+  			<input type="checkbox" name="check6" value="c6"> <label>Lifestyle</label> <br> <br>
+  			<input type="checkbox" name="check7" value="c7"> <label>Social Networking</label> <br> <br>
+  			<input type="checkbox" name="check7" value="c7"> <label>Other</label><br> <br>
 		</form>
 
 		<h2>Habits</h2>
@@ -246,16 +246,17 @@
 
 		<input type="button" onclick="myFunction()" value="Submit">
 		
-		<h1 id="message"></h1><br>
+		<h1 id="message"></h1>
 		<p id="score"></p>
-		<div id="total"><div>
+		<div id="total"></div>
 
 		<script>
 		function myFunction() {
 			var message = "Your Personal Digital Index Score is ";
 			var x = document.getElementById("year").value;
 			document.getElementById("message").innerHTML = message + x;
-			
+
+			var score = 0;
 			// var nameValue = document.getElementById("uniqueID").value;
 			// document.getElementById("demo").innerHTML = nameValue;
 
@@ -269,6 +270,23 @@
    //          }
    			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
 			document.getElementById("score").innerHTML = text;
+
+			//var totals = calculateDevices();
+			document.getElementById("total").innerHTML = calculateDevices();
+		}
+
+		function calculateDevices() {
+
+			var checks = document.getElementsByName("check");
+			var score = 0;
+			for (i = 0; i < checks.length; i++)
+			{
+				if (checks[i].checked) {
+					score += 1;
+				}
+			}
+			var 
+			return score;
 		}
 		</script>
 
