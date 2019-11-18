@@ -150,14 +150,14 @@
 		<form>
 			<h2>Applications</h2>
 			<!-- Check off your main applications on your devices -->
-  			<input type="checkbox" name="apps" value="c1"> <label>Utility</label> <br> <br>
-  			<input type="checkbox" name="apps" value="c2"> <label>Entertainment</label> <br> <br>
-  			<input type="checkbox" name="apps" value="c3"> <label>Games</label> <br> <br>
-  			<input type="checkbox" name="apps" value="c4"> <label>News</label> <br> <br>
-  			<input type="checkbox" name="apps" value="c5"> <label>Productivity</label> <br> <br>
-  			<input type="checkbox" name="apps" value="c6"> <label>Lifestyle</label> <br> <br>
-  			<input type="checkbox" name="apps" value="c7"> <label>Social Networking</label> <br> <br>
-  			<input type="checkbox" name="apps" value="c7"> <label>Other</label><br> <br>
+			<input type="checkbox" name="apps" value="positive"> <label>Educational</label> <br> <br>
+			<input type="checkbox" name="apps" value="negative"> <label>Entertainment</label> <br> <br>
+  			<input type="checkbox" name="apps" value="negative"> <label>Games</label> <br> <br>
+  			<input type="checkbox" name="apps" value="positive"> <label>News</label> <br> <br>
+  			<input type="checkbox" name="apps" value="positive"> <label>Productivity</label> <br> <br>
+  			<input type="checkbox" name="apps" value="negative"> <label>Shopping</label><br> <br>
+  			<input type="checkbox" name="apps" value="negative"> <label>Social Networking</label> <br> <br>
+  			<input type="checkbox" name="apps" value="positive"> <label>Utility</label> <br> <br>
 		</form>
 
 		<h2>Habits</h2>
@@ -275,7 +275,7 @@
 			var apps = calculateApplications();
 			var habits = calculateHabits();
 			var usage = calculateUsage();
-			document.getElementById("total").innerHTML = Math.round(habits);
+			document.getElementById("total").innerHTML = Math.round(apps);
 		}
 
 		function calculateDevices() {
@@ -292,11 +292,16 @@
 
 		function calculateApplications() {
 			var apps = document.getElementsByName("apps");
-			var score = 0;
+			var score = 25;
 			for (i = 0; i < apps.length; i++)
 			{
 				if (apps[i].checked) {
-					score += 1;
+					if (apps[i].value === "positive")
+					{
+						score -= 6.25;
+					} else if (apps[i].value === "negative") {
+						score += 6.25;
+					}
 				}
 			}
 			return score;
@@ -322,7 +327,6 @@
 					}
 				}
 			}
-			alert(never);
 			var score = ((never * 0) + (sometimes * 1) + (often * 2) + (always * 3)) / 10 / 3 * 50;
 			return score;
 		}
