@@ -228,29 +228,15 @@
 		<p id="score"></p>
 		<div id="total"></div>
 
-		<form action="/action_page.php">
+<!-- 		<form action="/action_page.php">
 		  <label>Year of Birth</label><br>
 		  <input id="year" name="date" type="number" min="0">
-		</form>
-
+		</form> -->
+<!-- 		var x = document.getElementById("year").value;
+ -->
 		<script>
 		function myFunction() {
 			alert("By using this website, you are consenting to the use of Third Party Cookies.");
-			var x = document.getElementById("year").value;
-			
-			// var nameValue = document.getElementById("uniqueID").value;
-			// document.getElementById("demo").innerHTML = nameValue;
-
-			// var ele = document.getElementsByName('genderz'); 
-            
-   //          for(i = 0; i < ele.length; i++) { 
-   //              if(ele[i].checked) {
-   //              	document.getElementById("demo").innerHTML
-   //                      += ele[i].value; 
-   //              }
-   //          }
-   // 			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
-			// document.getElementById("score").innerHTML = text;
 
 			var devices = calculateDevices();
 			var applications = calculateApplications();
@@ -261,6 +247,10 @@
 			var score = devices + applications + habits + usage;
 			var message = "Your Personal Digital Index Score is ";
 			document.getElementById("message").innerHTML = message + Math.round(score);
+
+			var text = "Share this number with your primary care physician so they can give you professional help in improving your health!"
+			document.getElementById("score").innerHTML = text;
+
 		}
 
 		function calculateDevices() {
