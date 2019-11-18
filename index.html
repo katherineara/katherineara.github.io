@@ -70,7 +70,7 @@
 
 		input[type=button] {
 			padding: 16px 32px;
-			font-size: 50px;
+			font-size: 70px;
 		}
 	</style>
 	<title>Personal Digital Index Calculator</title>
@@ -90,10 +90,10 @@
     		</ul>
 		</nav>
 		
+		<h2><u>Calculator</u></h2>
 		
 		<p>Answer the following questions to the best of your ability, then click "Submit" to get your results:</p>
 <!-- 
-
 		<form id="genderz" action="/action_page.php">
 			What is your gender? <br>
 		  <input type="radio" name="genderz" value="male" checked> Male<br>
@@ -101,11 +101,11 @@
 		  <input type="radio" name="genderz" value="other"> Other<br><br>
 		</form>  -->
 
-		<h2>Calculator</h2>
+		
 
 		<form>
 			<h2>Device Checklist</h2>
-			<h4>Check off everything applicable to you</h4>
+			<h4>Check off everything applicable to you:</h4>
   			<input type="checkbox" name="check" value="c1"> <label>I have a smartphone</label> <br> <br>
   			<input type="checkbox" name="check" value="c2"> <label>I have a laptop</label> <br> <br>
   			<input type="checkbox" name="check" value="c3"> <label>I have a tablet</label> <br> <br>
@@ -117,27 +117,27 @@
 		
 
 			<h2>Phone Usage</h2>
-			<h4>Enter your best estimates</h4>
+			<h4>Enter your best estimates:</h4>
 			<label>What is your daily screen time across all devices? (Hours i.e. 1.2) </label><br>
-			<input type="number" id="usage1" required><br><br>
+			<input type="number" id="usage1" value="0" required><br><br>
 			<label>How much time do you spend on your phone per week? (Hours) </label><br>
-			<input type="number" id="usage2"><br><br>
+			<input type="number" id="usage2" value="0" ><br><br>
 			<label>How many notifications do you get on your phone per day? (Number of Notifications)</label><br>
-			<input type="number" id="usage3"><br><br>
+			<input type="number" id="usage3" value="0" ><br><br>
 			<label>How many times do you pick up your phone per day? (Pickups) </label><br>
-			<input type="number" id="usage4"><br><br>
+			<input type="number" id="usage4" value="0" ><br><br>
 			<label>How much time do you spend per day passively taking in content? (i.e. YouTube, Netflix, Videos)</label><br>
-			<input type="number" id="usage5"><br><br>
+			<input type="number" id="usage5" value="0" ><br><br>
 			<label>How many apps do you have on your phone?</label><br>
-			<input type="number" id="usage6"><br><br>
+			<input type="number" id="usage6" value="0" ><br><br>
 			<label>How many times do you have to charge your phone per day?</label><br>
-			<input type="number" id="usage7"><br><br>
+			<input type="number" id="usage7" value="0" ><br><br>
 			<label>How much time do spend per day working on your laptop?</label><br>
-			<input type="number" id="usage8"><br>
+			<input type="number" id="usage8" value="0" ><br>
 
 
 			<h2>Applications</h2>
-			<h4>Check off your main applications on your devices:</h4>
+			<h4>Check off your main categories of applications that you regularly use on your devices:</h4>
 			<input type="checkbox" name="apps" value="positive"> <label>Educational</label> <br> <br>
 			<input type="checkbox" name="apps" value="negative"> <label>Entertainment</label> <br> <br>
   			<input type="checkbox" name="apps" value="negative"> <label>Games</label> <br> <br>
@@ -230,9 +230,7 @@
 			  <input type="radio" name="habits" value="always"> Always <br><br>
 			</form>
 
-			<br>
-
-			<input type="submit" onclick="myFunction()" value="Submit">
+			<input type="button" onclick="myFunction()" value="Submit">
 		</form>
 		
 		<h1 id="message"></h1>
@@ -246,6 +244,7 @@
 
 		<script>
 		function myFunction() {
+			alert("By using this website, you are consenting to the use of Third Party Cookies.");
 			var x = document.getElementById("year").value;
 			
 			// var nameValue = document.getElementById("uniqueID").value;
@@ -266,6 +265,7 @@
 			var applications = calculateApplications();
 			var habits = calculateHabits();
 			var usage = calculateUsage();
+			// alert(devices + " " + applications + " " + habits + " " + usage);
 
 			var score = devices + applications + habits + usage;
 			var message = "Your Personal Digital Index Score is ";
