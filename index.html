@@ -84,346 +84,37 @@
 		</div>
 		<nav>
     		<ul>
-        		<li><a href="/index">About</a></li>
+        		<li><a href="/index"><strong>About</strong></a></li>
 	        	<li><a href="/about">Calculator</a></li>
         		<li><a href="/moreinfo">More Information</a></li>
     		</ul>
 		</nav>
-		
-		<h2><u>Calculator</u></h2>
-		
-		<p>Answer the following questions to the best of your ability, then click "Submit" to get your results:</p>
-<!-- 
-		<form id="genderz" action="/action_page.php">
-			What is your gender? <br>
-		  <input type="radio" name="genderz" value="male" checked> Male<br>
-		  <input type="radio" name="genderz" value="femaleeee"> Female<br>
-		  <input type="radio" name="genderz" value="other"> Other<br><br>
-		</form>  -->
+	</head>
+	<body>
+		<h2><u>About</u></h2>
 
-		
+		<p>PDI is a standardized measure of your Personal Digital Health based on your digital usage.</p>
 
-		<form>
-			<h2>Device Checklist</h2>
-			<h4>Check off everything applicable to you:</h4>
-  			<input type="checkbox" name="check" value="c1"> <label>I have a smartphone</label> <br> <br>
-  			<input type="checkbox" name="check" value="c2"> <label>I have a laptop</label> <br> <br>
-  			<input type="checkbox" name="check" value="c3"> <label>I have a tablet</label> <br> <br>
-  			<input type="checkbox" name="check" value="c4"> <label>I have a television</label> <br> <br>
-  			<input type="checkbox" name="check" value="c5"> <label>I have a smart watch</label> <br> <br>
-  			<input type="checkbox" name="check" value="c6"> <label>I have an e-reader</label> <br> <br>
-  			<input type="checkbox" name="check" value="c7"> <label>I have a video game console</label> <br> <br>
-  			<input type="checkbox" name="check" value="c8"> <label>I have additional devices not listed here</label> <br> <br>
-		
+		<h2>Why is your PDI important?</h2>
+		<div>It is very important that you pay close attention to your relationship with technology. In the age of Digital Over-Consumption, some people may be using technology too much, while others are not using it enough. It can become dangerous if technology is not used optimally, so it is essential that people are able to control their usage. This measurement is useful for self-improvement because it gives you a baseline number that you can use to improve yourself. "A baseline tells you 'how things are.' By carefully observing your current situation, you set yourself up for knowing when and how it changes" (“Get Started”, Quantified Self). </div>
 
-			<h2>Phone Usage</h2>
-			<h4>Enter your best estimates:</h4>
-			<label>What is your daily screen time across all devices? (Hours i.e. 1.2) </label><br>
-			<input type="number" id="usage1" value="0" required><br><br>
-			<label>How much time do you spend on your phone per week? (Hours) </label><br>
-			<input type="number" id="usage2" value="0" ><br><br>
-			<label>How many notifications do you get on your phone per day? (Number of Notifications)</label><br>
-			<input type="number" id="usage3" value="0" ><br><br>
-			<label>How many times do you pick up your phone per day? (Pickups) </label><br>
-			<input type="number" id="usage4" value="0" ><br><br>
-			<label>How much time do you spend per day passively taking in content? (i.e. YouTube, Netflix, Videos)</label><br>
-			<input type="number" id="usage5" value="0" ><br><br>
-			<label>How many apps do you have on your phone?</label><br>
-			<input type="number" id="usage6" value="0" ><br><br>
-			<label>How many times do you have to charge your phone per day?</label><br>
-			<input type="number" id="usage7" value="0" ><br><br>
-			<label>How much time do spend per day working on your laptop?</label><br>
-			<input type="number" id="usage8" value="0" ><br>
+		<h2>What are the normal ranges for your PDI?</h2>
+		<div></div>
+
+		<h2>What is Digital Dieting?</h2>
+		<div></div>
+
+		<h2>What are ways you can reduce your PDI?</h2>
+		<div></div>
+
+		<h2>What are ways you can increase your PDI?</h2>
+		<div></div>
+
+		<h2>Common Mistakes</h2>
+		<div>It is important to be intentional with your digital use and not make mistakes with the implementation. 
+		In order to have a healthy effect, it is important to make lifestyle changes instead of using temporary solutions. 
+		"A typical culprit, for example, was technologoy restriction rules that were either too vague or too strict...Those who treated this experiment purely as a detox, where the goal was to simply take a break from their digital life before returning to business as usual, also struggled" (62, Newport).</div>
 
 
-			<h2>Applications</h2>
-			<h4>Check off your main categories of applications that you regularly use on your devices:</h4>
-			<input type="checkbox" name="apps" value="positive"> <label>Educational</label> <br> <br>
-			<input type="checkbox" name="apps" value="negative"> <label>Entertainment</label> <br> <br>
-  			<input type="checkbox" name="apps" value="negative"> <label>Games</label> <br> <br>
-  			<input type="checkbox" name="apps" value="positive"> <label>News</label> <br> <br>
-  			<input type="checkbox" name="apps" value="positive"> <label>Productivity</label> <br> <br>
-  			<input type="checkbox" name="apps" value="negative"> <label>Shopping</label><br> <br>
-  			<input type="checkbox" name="apps" value="negative"> <label>Social Networking</label> <br> <br>
-  			<input type="checkbox" name="apps" value="positive"> <label>Utility</label> <br> <br>
-
-
-			<h2>Habits</h2>
-			<form action="/action_page.php">
-			  <h4>Rate the following statements based on how often you do them:</h4>
-			  <label>I carry my phone with me</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			 </form>
-
-			 <form id="habits" action="/action_page.php">
-			  <label>I check my phone while I am eating meals</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			  </form>
-
-			 <form action="/action_page.php">
-			  <label>I use the phone when I go to the restroom</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			  </form>
-
-			 <form action="/action_page.php">
-			  <label>I go on my phone while I am walking</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			 </form>
-
-			 <form action="/action_page.php">
-			  <label>My eyes get tired from looking at a screen</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			</form>
-
-			<form action="/action_page.php">
-			  <label>I check my phone or laptop first thing in the morning</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			</form>
-
-			<form action="/action_page.php">
-			  <label>I sleep with my phone next to my bed</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			</form>
-
-			<form action="/action_page.php">
-			  <label>I check my phone in the middle of the night</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			</form>
-
-			<form action="/action_page.php">
-			  <label>My posture is bent when looking at my device</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always<br><br>
-			</form>
-
-			<form action="/action_page.php">
-			  <label>I sleep less than normal because I am on digital devices</label><br>
-			  <input type="radio" name="habits" value="never" checked> Never <br>
-			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-			  <input type="radio" name="habits" value="often"> Often <br>
-			  <input type="radio" name="habits" value="always"> Always <br><br>
-			</form>
-
-			<input type="button" onclick="myFunction()" value="Submit">
-		</form>
-		
-		<h1 id="message"></h1>
-		<p id="score"></p>
-		<div id="total"></div>
-
-		<form action="/action_page.php">
-		  <label>Year of Birth</label><br>
-		  <input id="year" name="date" type="number" min="0">
-		</form>
-
-		<script>
-		function myFunction() {
-			alert("By using this website, you are consenting to the use of Third Party Cookies.");
-			var x = document.getElementById("year").value;
-			
-			// var nameValue = document.getElementById("uniqueID").value;
-			// document.getElementById("demo").innerHTML = nameValue;
-
-			// var ele = document.getElementsByName('genderz'); 
-            
-   //          for(i = 0; i < ele.length; i++) { 
-   //              if(ele[i].checked) {
-   //              	document.getElementById("demo").innerHTML
-   //                      += ele[i].value; 
-   //              }
-   //          }
-   // 			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
-			// document.getElementById("score").innerHTML = text;
-
-			var devices = calculateDevices();
-			var applications = calculateApplications();
-			var habits = calculateHabits();
-			var usage = calculateUsage();
-			// alert(devices + " " + applications + " " + habits + " " + usage);
-
-			var score = devices + applications + habits + usage;
-			var message = "Your Personal Digital Index Score is ";
-			document.getElementById("message").innerHTML = message + Math.round(score);
-		}
-
-		function calculateDevices() {
-			var checks = document.getElementsByName("check");
-			var score = 0;
-			for (i = 0; i < checks.length; i++)
-			{
-				if (checks[i].checked) {
-					score += 6.25;
-				}
-			}
-			return score;
-		}
-
-		function calculateApplications() {
-			var apps = document.getElementsByName("apps");
-			var score = 25;
-			for (i = 0; i < apps.length; i++)
-			{
-				if (apps[i].checked) {
-					if (apps[i].value === "positive")
-					{
-						score -= 6.25;
-					} else if (apps[i].value === "negative") {
-						score += 6.25;
-					}
-				}
-			}
-			return score;
-		}
-
-		function calculateHabits() {
-			var habit = document.getElementsByName("habits");
-			var never = 0;
-			var sometimes = 0;
-			var often = 0;
-			var always = 0;
-			for (i = 0; i < habit.length; i++)
-			{
-				if (habit[i].checked) {
-					if (habit[i].value === "never") {
-						never++;
-					} else if (habit[i].value === "sometimes") {
-						sometimes++;
-					} else if (habit[i].value === "often") {
-						often++;
-					} else if (habit[i].value === "always") {
-						always++;
-					}
-				}
-			}
-			var score = ((never * 0) + (sometimes * 1) + (often * 2) + (always * 3)) / 10 / 3 * 50;
-			return score;
-		}
-
-		function calculateUsage() {
-			var score = 0;
-			var usage1 = document.getElementById("usage1").value;
-			if (usage1 > 16)
-			{
-				score += 3;
-			} else if (usage1 > 8)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-
-			var usage2 = document.getElementById("usage2").value;
-			if (usage2 > 112)
-			{
-				score += 3;
-			} else if (usage2 > 56)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-
-			var usage3 = document.getElementById("usage3").value;
-			if (usage3 > 200)
-			{
-				score += 3;
-			} else if (usage3 > 100)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-
-			var usage4 = document.getElementById("usage4").value;
-			if (usage4 > 100)
-			{
-				score += 3;
-			} else if (usage4 > 50)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-
-			var usage5 = document.getElementById("usage5").value;
-			if (usage5 > 10)
-			{
-				score += 3;
-			} else if (usage5 > 5)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-
-			var usage6 = document.getElementById("usage6").value;
-			if (usage6 > 50)
-			{
-				score += 3;
-			} else if (usage6 > 25)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-
-			var usage7 = document.getElementById("usage7").value;
-			if (usage7 > 4)
-			{
-				score += 3;
-			} else if (usage7 > 2)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-
-			var usage8 = document.getElementById("usage8").value;
-			if (usage8 > 10)
-			{
-				score += 3;
-			} else if (usage8 > 5)
-			{
-				score += 2;
-			} else {
-				score += 1;
-			}
-	
-			score = score / 8 / 3 * 50;
-			return score;
-		}
-		</script>
-
-		<footer>
-    		<ul>
-        		<li><a href="/moreinfo">More Information</a></li>
-			</ul>
-		</footer>
 	</body>
 </html>
