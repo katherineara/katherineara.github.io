@@ -84,39 +84,28 @@
 		</div>
 		<nav>
     		<ul>
-        		<li><a href="/">About</a></li>
+        		<li><a href="/index">About</a></li>
 	        	<li><a href="/about">Calculator</a></li>
-<!--         		<li><a href="/contact">Contact</a></li>
-        		<li><a href="/moreinfo">More Information</a></li> -->
+        		<li><a href="/moreinfo">More Information</a></li>
     		</ul>
 		</nav>
 		
 		
 		<p>Answer the following questions to the best of your ability, then click "Submit" to get your results:</p>
-
-<!-- 		<form action="/action_page.php">
-			<strong>Personal Questions</strong><br><br>
-			What is your age?<br>
-			<input id="uniqueID" type="text" name="age">
-			<br><br>
-		</form>
+<!-- 
 
 		<form id="genderz" action="/action_page.php">
 			What is your gender? <br>
 		  <input type="radio" name="genderz" value="male" checked> Male<br>
 		  <input type="radio" name="genderz" value="femaleeee"> Female<br>
 		  <input type="radio" name="genderz" value="other"> Other<br><br>
-		</form> -->
+		</form>  -->
 
 		<h2>Calculator</h2>
-		<form action="/action_page.php">
-		  <label>Year of Birth</label><br>
-		  <input id="year" name="date" type="number" min="0">
-		</form>
 
 		<form>
 			<h2>Device Checklist</h2>
-			<!-- Check off everything applicable to you -->
+			<h4>Check off everything applicable to you</h4>
   			<input type="checkbox" name="check" value="c1"> <label>I have a smartphone</label> <br> <br>
   			<input type="checkbox" name="check" value="c2"> <label>I have a laptop</label> <br> <br>
   			<input type="checkbox" name="check" value="c3"> <label>I have a tablet</label> <br> <br>
@@ -124,13 +113,13 @@
   			<input type="checkbox" name="check" value="c5"> <label>I have a smart watch</label> <br> <br>
   			<input type="checkbox" name="check" value="c6"> <label>I have an e-reader</label> <br> <br>
   			<input type="checkbox" name="check" value="c7"> <label>I have a video game console</label> <br> <br>
-		</form>
+  			<input type="checkbox" name="check" value="c8"> <label>I have additional devices not listed here</label> <br> <br>
+		
 
-		<form action="/action_page.php">
 			<h2>Phone Usage</h2>
-		<!-- 	Enter your best estimates -->
+			<h4>Enter your best estimates</h4>
 			<label>What is your daily screen time across all devices? (Hours i.e. 1.2) </label><br>
-			<input type="number" id="usage1"><br><br>
+			<input type="number" id="usage1" required><br><br>
 			<label>How much time do you spend on your phone per week? (Hours) </label><br>
 			<input type="number" id="usage2"><br><br>
 			<label>How many notifications do you get on your phone per day? (Number of Notifications)</label><br>
@@ -145,11 +134,10 @@
 			<input type="number" id="usage7"><br><br>
 			<label>How much time do spend per day working on your laptop?</label><br>
 			<input type="number" id="usage8"><br>
-		</form>
 
-		<form>
+
 			<h2>Applications</h2>
-			<!-- Check off your main applications on your devices -->
+			<h4>Check off your main applications on your devices:</h4>
 			<input type="checkbox" name="apps" value="positive"> <label>Educational</label> <br> <br>
 			<input type="checkbox" name="apps" value="negative"> <label>Entertainment</label> <br> <br>
   			<input type="checkbox" name="apps" value="negative"> <label>Games</label> <br> <br>
@@ -158,105 +146,108 @@
   			<input type="checkbox" name="apps" value="negative"> <label>Shopping</label><br> <br>
   			<input type="checkbox" name="apps" value="negative"> <label>Social Networking</label> <br> <br>
   			<input type="checkbox" name="apps" value="positive"> <label>Utility</label> <br> <br>
+
+
+			<h2>Habits</h2>
+			<form action="/action_page.php">
+			  <h4>Rate the following statements based on how often you do them:</h4>
+			  <label>I carry my phone with me</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			 </form>
+
+			 <form id="habits" action="/action_page.php">
+			  <label>I check my phone while I am eating meals</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			  </form>
+
+			 <form action="/action_page.php">
+			  <label>I use the phone when I go to the restroom</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			  </form>
+
+			 <form action="/action_page.php">
+			  <label>I go on my phone while I am walking</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			 </form>
+
+			 <form action="/action_page.php">
+			  <label>My eyes get tired from looking at a screen</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			</form>
+
+			<form action="/action_page.php">
+			  <label>I check my phone or laptop first thing in the morning</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			</form>
+
+			<form action="/action_page.php">
+			  <label>I sleep with my phone next to my bed</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			</form>
+
+			<form action="/action_page.php">
+			  <label>I check my phone in the middle of the night</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			</form>
+
+			<form action="/action_page.php">
+			  <label>My posture is bent when looking at my device</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always<br><br>
+			</form>
+
+			<form action="/action_page.php">
+			  <label>I sleep less than normal because I am on digital devices</label><br>
+			  <input type="radio" name="habits" value="never" checked> Never <br>
+			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
+			  <input type="radio" name="habits" value="often"> Often <br>
+			  <input type="radio" name="habits" value="always"> Always <br><br>
+			</form>
+
+			<br>
+
+			<input type="submit" onclick="myFunction()" value="Submit">
 		</form>
-
-		<h2>Habits</h2>
-		<form action="/action_page.php">
-		  <!-- <h4>Rate the following statements based on how often you do them:</h4> -->
-		  <label>I carry my phone with me</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		 </form>
-
-		 <form id="habits" action="/action_page.php">
-		  <label>I check my phone while I am eating meals</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		  </form>
-
-		 <form action="/action_page.php">
-		  <label>I use the phone when I go to the restroom</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		  </form>
-
-		 <form action="/action_page.php">
-		  <label>I go on my phone while I am walking</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		 </form>
-
-		 <form action="/action_page.php">
-		  <label>My eyes get tired from looking at a screen</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		</form>
-
-		<form action="/action_page.php">
-		  <label>I check my phone or laptop first thing in the morning</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		</form>
-
-		<form action="/action_page.php">
-		  <label>I sleep with my phone next to my bed</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		</form>
-
-		<form action="/action_page.php">
-		  <label>I check my phone in the middle of the night</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		</form>
-
-		<form action="/action_page.php">
-		  <label>My posture is bent when looking at my device</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always<br><br>
-		</form>
-
-		<form action="/action_page.php">
-		  <label>I sleep less than normal because I am on digital devices</label><br>
-		  <input type="radio" name="habits" value="never" checked> Never <br>
-		  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
-		  <input type="radio" name="habits" value="often"> Often <br>
-		  <input type="radio" name="habits" value="always"> Always <br><br>
-		</form>
-
-		<br>
-
-		<input type="button" onclick="myFunction()" value="Submit">
 		
 		<h1 id="message"></h1>
 		<p id="score"></p>
 		<div id="total"></div>
 
+		<form action="/action_page.php">
+		  <label>Year of Birth</label><br>
+		  <input id="year" name="date" type="number" min="0">
+		</form>
+
 		<script>
 		function myFunction() {
-			var message = "Your Personal Digital Index Score is ";
 			var x = document.getElementById("year").value;
-			document.getElementById("message").innerHTML = message + x;
-
-			var score = 0;
+			
 			// var nameValue = document.getElementById("uniqueID").value;
 			// document.getElementById("demo").innerHTML = nameValue;
 
@@ -268,14 +259,17 @@
    //                      += ele[i].value; 
    //              }
    //          }
-   			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
-			document.getElementById("score").innerHTML = text;
+   // 			var text = "Low: 0-100, Medium: 100-200, High: 200-300";
+			// document.getElementById("score").innerHTML = text;
 
 			var devices = calculateDevices();
-			var apps = calculateApplications();
+			var applications = calculateApplications();
 			var habits = calculateHabits();
 			var usage = calculateUsage();
-			document.getElementById("total").innerHTML = Math.round(apps);
+
+			var score = devices + applications + habits + usage;
+			var message = "Your Personal Digital Index Score is ";
+			document.getElementById("message").innerHTML = message + Math.round(score);
 		}
 
 		function calculateDevices() {
@@ -284,7 +278,7 @@
 			for (i = 0; i < checks.length; i++)
 			{
 				if (checks[i].checked) {
-					score += 1;
+					score += 6.25;
 				}
 			}
 			return score;
@@ -424,7 +418,6 @@
 			score = score / 8 / 3 * 50;
 			return score;
 		}
-
 		</script>
 
 		<footer>
