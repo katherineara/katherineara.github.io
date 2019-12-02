@@ -23,14 +23,12 @@
 		a:hover {
 		    text-decoration: underline;
 		}
-		h1 {
-		    font-size: 3em;
+		
+		p, li {
+		    font-size: 1em;
+		    line-height: 1.6em;
 		    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-		}
-		p {
-		    font-size: 1.5em;
-		    line-height: 1.4em;
-		    color: #333;
+		    max-width: 900px;
 		}
 		footer {
 		    border-top: 1px solid #d5d5d5;
@@ -47,12 +45,29 @@
 		}
 
 		label {
-			font-size: 1.2em;
+			font-size: 1em;
+		    line-height: 1.6em;
+		    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+		    max-width: 900px;
 		}
 
 		input[type=number]:focus {
   			border: 2px solid #555;
   			
+		}
+		h1 {
+		    font-size: 3em;
+		    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+		}
+
+		h4 {
+			font-size: 1.3em;
+			font-family:'Helvetica', 'Arial', 'Sans-Serif';
+		}
+
+		h3 {
+			font-size: 1em;
+			font-family:'Helvetica', 'Arial', 'Sans-Serif';
 		}
 
 		input[type=text], [type=number] {
@@ -65,7 +80,7 @@
 			border-radius: 4px;
 			box-sizing: border-box;
 			font-size: 17px;
-			font-family: 'Sans-Serif';
+			font-family:'Helvetica', 'Arial', 'Sans-Serif';
 		}
 
 		input[type=button] {
@@ -94,9 +109,11 @@
 		
 		<p>Answer <strong>all</strong> of the following questions to the best of your ability, then click "Submit" to get your results:</p>
 
+		<hr>
+
 		<form>
 			<h2>Device Checklist</h2>
-			<h4>Check off everything applicable to you:</h4>
+			<h3>Check off everything applicable to you:</h3>
   			<input type="checkbox" name="check" value="c1"> <label>I have a smartphone</label> <br> <br>
   			<input type="checkbox" name="check" value="c2"> <label>I have a laptop</label> <br> <br>
   			<input type="checkbox" name="check" value="c3"> <label>I have a tablet</label> <br> <br>
@@ -106,9 +123,10 @@
   			<input type="checkbox" name="check" value="c7"> <label>I have a video game console</label> <br> <br>
   			<input type="checkbox" name="check" value="c8"> <label>I have additional devices not listed here</label> <br> <br>
 		
+  			<hr>
 
 			<h2>Phone Usage</h2>
-			<h4>Enter your best estimates: (Time Measured in Hours - 1.2 for 1 hour 12 min) </h4>
+			<h3>Enter your best estimates: (Time Measured in Hours - 1.2 for 1 hour 12 min) </h3>
 			<label>What is your daily screen time across all devices? (Hours) </label><br>
 			<input type="number" id="usage1" value="0" required><br><br>
 			<label>How much time do you spend on your phone per week? (Hours) </label><br>
@@ -126,9 +144,10 @@
 			<label>How much time do spend per day on your laptop not working? (Hours) </label><br>
 			<input type="number" id="usage8" value="0" ><br>
 
+			<hr>
 
 			<h2>Applications</h2>
-			<h4>Check off your main categories of applications that you regularly use on your devices:</h4>
+			<h3>Check off your main categories of applications that you regularly use on your devices:</h3>
 			<input type="checkbox" name="apps" value="positive"> <label>Educational</label> <br> <br>
 			<input type="checkbox" name="apps" value="negative"> <label>Entertainment</label> <br> <br>
   			<input type="checkbox" name="apps" value="negative"> <label>Games</label> <br> <br>
@@ -138,10 +157,11 @@
   			<input type="checkbox" name="apps" value="negative"> <label>Social Networking</label> <br> <br>
   			<input type="checkbox" name="apps" value="positive"> <label>Utility</label> <br> <br>
 
+  			<hr>
 
 			<h2>Habits</h2>
 			<form action="/action_page.php">
-			  <h4>Rate the following statements based on how often you do them:</h4>
+			  <h3>Rate the following statements based on how often you do them:</h3>
 			  <label>I carry my phone with me</label><br>
 			  <input type="radio" name="habits" value="never" checked> Never <br>
 			  <input type="radio" name="habits" value="sometimes"> Sometimes <br>
@@ -221,6 +241,9 @@
 			  <input type="radio" name="habits" value="always"> Always <br><br>
 			</form>
 
+			<hr>
+
+			<br>
 			<input type="button" onclick="myFunction()" value="Submit">
 		</form>
 		
@@ -228,12 +251,6 @@
 		<p id="score"></p>
 		<div id="total"></div>
 
-<!-- 		<form action="/action_page.php">
-		  <label>Year of Birth</label><br>
-		  <input id="year" name="date" type="number" min="0">
-		</form> -->
-<!-- 		var x = document.getElementById("year").value;
- -->
 		<script>
 		function myFunction() {
 			alert("By using this website, you are consenting to the use of Third Party Cookies.");
@@ -242,7 +259,6 @@
 			var applications = calculateApplications();
 			var habits = calculateHabits();
 			var usage = calculateUsage();
-			// alert(devices + " " + applications + " " + habits + " " + usage);
 
 			var score = devices + applications + habits + usage;
 			var message = "Your Personal Digital Index Score is ";
