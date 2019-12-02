@@ -1,6 +1,6 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+margin: 60px auto;
+width: 70%;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -19,14 +19,12 @@ a {
 a:hover {
     text-decoration: underline;
 }
-h1 {
-    font-size: 3em;
+
+p, li {
+    font-size: 1em;
+    line-height: 1.6em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
+    max-width: 900px;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -40,4 +38,48 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+label {
+    font-size: 1em;
+    line-height: 1.6em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    max-width: 900px;
+}
+
+input[type=number]:focus {
+    border: 2px solid #555;
+    
+}
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+h4 {
+    font-size: 1.3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+h3 {
+    font-size: 1em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+input[type=text], [type=number] {
+    outline: none;
+    width: 60%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+input[type=button] {
+    padding: 16px 32px;
+    font-size: 70px;
 }
